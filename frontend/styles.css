@@ -1,0 +1,255 @@
+/* Custom CSS for enhanced animations and effects */
+
+/* Smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #0ea5e9, #06b6d4);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #0284c7, #0891b2);
+}
+
+/* Enhanced button ripple effect */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    transform: scale(0);
+    animation: ripple-animation 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    z-index: 10;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(5);
+        opacity: 0;
+    }
+}
+
+/* Button positioning for ripple effect */
+button {
+    position: relative;
+    overflow: hidden;
+    transform-origin: center;
+}
+
+/* Enhanced card hover effects */
+.card-hover {
+    transform-origin: center;
+    will-change: transform;
+}
+
+/* Smooth focus states */
+button:focus, 
+a:focus, 
+input:focus, 
+textarea:focus, 
+select:focus {
+    outline: 2px solid #0ea5e9;
+    outline-offset: 2px;
+    border-radius: 8px;
+}
+
+/* Enhanced gradient text */
+.bg-clip-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* Improved animation timing */
+.animate-float {
+    animation-timing-function: ease-in-out;
+}
+
+/* Glass effect enhancement */
+.glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Enhanced navbar scroll effect */
+nav.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Form input enhancements */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(14, 165, 233, 0.15);
+}
+
+/* Enhanced mobile menu animation */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+
+#mobile-menu.hidden {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+#mobile-menu:not(.hidden) {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Improved section spacing */
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Enhanced animation delays for staggered effects */
+.animate-fade-up {
+    animation-fill-mode: both;
+}
+
+.animate-zoom-in {
+    animation-fill-mode: both;
+}
+
+/* Responsive image handling */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Enhanced link hover effects */
+a {
+    transition: all 0.3s ease;
+}
+
+/* Carousel container styling */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Auto-scrolling carousel animation */
+.carousel-slide {
+    display: flex;
+    animation: slide 15s infinite linear;
+}
+
+.carousel-slide:hover {
+    animation-play-state: paused;
+}
+
+/* Touch-friendly carousel for mobile */
+@media (max-width: 768px) {
+    .carousel-slide {
+        animation-duration: 20s;
+    }
+}
+
+/* Video background styling */
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Improved accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .carousel-slide {
+        animation: none !important;
+    }
+}
+
+/* Enhanced mobile responsiveness */
+@media (max-width: 768px) {
+    .text-5xl {
+        font-size: 2.5rem;
+    }
+    
+    .text-7xl {
+        font-size: 3.5rem;
+    }
+    
+    .py-24 {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    
+    /* Mobile-friendly carousel */
+    .carousel-slide {
+        animation-duration: 25s;
+    }
+}
+
+/* Loading state for images */
+.image-placeholder {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Enhanced button interactions */
+button:active {
+    transform: scale(0.98);
+}
+
+/* Improved card shadows */
+.shadow-xl:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Gradient overlay effects */
+.gradient-overlay {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+}
+
+/* Enhanced text selection */
+::selection {
+    background: rgba(14, 165, 233, 0.3);
+    color: inherit;
+}
+
+::-moz-selection {
+    background: rgba(14, 165, 233, 0.3);
+    color: inherit;
+}

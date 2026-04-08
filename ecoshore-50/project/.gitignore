@@ -7,9 +7,6 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-frontend/node_modules
-ecoshore-50/node_modules
-
 node_modules
 dist
 dist-ssr

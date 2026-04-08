@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecoshore - Your Smart Coastal Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ocean-blue': '#0ea5e9',
+                        'turquoise': '#06b6d4',
+                        'coral': '#ff6b6b',
+                        'soft-yellow': '#fbbf24',
+                        'seafoam': '#34d399',
+                        'sky-light': '#e0f2fe',
+                        'sand': '#fef3c7'
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-up': 'fadeUp 0.8s ease-out',
+                        'zoom-in': 'zoomIn 0.6s ease-out',
+                        'glow': 'glow 2s ease-in-out infinite alternate'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        zoomIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.9)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' }
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 20px rgba(14, 165, 233, 0.5)' },
+                            '100%': { boxShadow: '0 0 30px rgba(14, 165, 233, 0.8)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-br from-sky-light via-white to-sand">
+    <!-- Navigation -->
+    <nav class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center animate-float">
+                        <div class="w-10 h-10 bg-gradient-to-br from-ocean-blue to-turquoise rounded-full flex items-center justify-center mr-3 shadow-lg">
+                            <i class="fas fa-umbrella-beach text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold bg-gradient-to-r from-ocean-blue to-turquoise bg-clip-text text-transparent">Ecoshore</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-ocean-blue font-semibold px-3 py-2 rounded-lg text-sm transition-all duration-300 hover:bg-sky-light hover:scale-105">Home</a>
+                        <a href="features.html" class="text-gray-700 hover:text-ocean-blue px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-sky-light hover:scale-105">Features</a>
+                        <a href="wedding.html" class="text-gray-700 hover:text-ocean-blue px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-sky-light hover:scale-105">Weddings</a>
+                        <a href="contact.html" class="text-gray-700 hover:text-ocean-blue px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-sky-light hover:scale-105">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-ocean-blue transition-all duration-300 hover:scale-110">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white/95 backdrop-blur-md border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-ocean-blue font-semibold rounded-lg transition-all duration-300 hover:bg-sky-light">Home</a>
+                <a href="features.html" class="block px-3 py-2 text-gray-700 hover:text-ocean-blue rounded-lg transition-all duration-300 hover:bg-sky-light">Features</a>
+                <a href="wedding.html" class="block px-3 py-2 text-gray-700 hover:text-ocean-blue rounded-lg transition-all duration-300 hover:bg-sky-light">Weddings</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-ocean-blue rounded-lg transition-all duration-300 hover:bg-sky-light">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video Background -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Video Background -->
+        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
+            <source src="https://player.vimeo.com/external/370467553.sd.mp4?s=e90dcaba73c19e0e36f03406b47bbd6a92d6e9a6&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
+        </video>
+        
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-br from-ocean-blue/80 via-turquoise/70 to-transparent"></div>
+        
+        <!-- Content -->
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-8 animate-fade-up drop-shadow-lg">
+                <span class="text-soft-yellow animate-glow">Ecoshore</span><br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-sky-light">Your Smart Coastal Companion</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto animate-fade-up drop-shadow-md" style="animation-delay: 0.2s;">
+                Discover beaches, stay safe, and plan perfect getaways with real-time data and community insights.
+            </p>
+            <a href="features.html" class="inline-block bg-gradient-to-r from-coral to-soft-yellow text-white px-10 py-5 rounded-full text-xl font-bold shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-coral/50 animate-glow">
+                <i class="fas fa-compass mr-2"></i>
+                Explore Features
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-24 bg-gradient-to-br from-white via-sky-light to-turquoise/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 animate-fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8">
+                    About <span class="text-transparent bg-clip-text bg-gradient-to-r from-ocean-blue to-turquoise">Ecoshore</span>
+                </h2>
+                <div class="max-w-4xl mx-auto">
+                    <p class="text-2xl text-gray-700 mb-10 leading-relaxed">
+                        Ecoshore bridges the gap between travelers and real-time beach data, creating a comprehensive platform 
+                        that enhances coastal experiences while promoting safety and environmental awareness.
+                    </p>
+                    <p class="text-xl text-gray-600 mb-12 leading-relaxed">
+                        Our platform combines cutting-edge technology with community engagement to provide accurate, 
+                        up-to-date information about beach conditions, safety alerts, and recreational opportunities.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="text-center animate-zoom-in bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                    <div class="w-20 h-20 bg-gradient-to-br from-seafoam to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl animate-float">
+                        <i class="fas fa-leaf text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Eco-Friendly</h3>
+                    <p class="text-gray-600 text-lg">Promoting sustainable beach practices and environmental conservation</p>
+                </div>
+                <div class="text-center animate-zoom-in bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105" style="animation-delay: 0.2s;">
+                    <div class="w-20 h-20 bg-gradient-to-br from-coral to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl animate-float" style="animation-delay: 0.2s;">
+                        <i class="fas fa-users text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Community Driven</h3>
+                    <p class="text-gray-600 text-lg">Powered by beach enthusiasts sharing real experiences</p>
+                </div>
+                <div class="text-center animate-zoom-in bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105" style="animation-delay: 0.4s;">
+                    <div class="w-20 h-20 bg-gradient-to-br from-ocean-blue to-turquoise rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl animate-float" style="animation-delay: 0.4s;">
+                        <i class="fas fa-clock text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Real-Time Data</h3>
+                    <p class="text-gray-600 text-lg">Always current, always accurate beach information</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Features Preview -->
+    <section class="py-24 bg-gradient-to-br from-turquoise/5 via-ocean-blue/5 to-sky-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 animate-fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    Why Choose <span class="text-transparent bg-clip-text bg-gradient-to-r from-ocean-blue to-turquoise">Ecoshore?</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    Everything you need for the perfect beach experience in one smart platform.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-ocean-blue/10 to-turquoise/20 rounded-2xl p-8 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-fade-up">
+                    <div class="w-16 h-16 bg-gradient-to-br from-ocean-blue to-turquoise rounded-2xl flex items-center justify-center mb-6 animate-float">
+                        <i class="fas fa-search text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Smart Search</h3>
+                    <p class="text-gray-600 leading-relaxed">Find perfect beaches based on your preferences and real-time conditions.</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-coral/10 to-pink-100 rounded-2xl p-8 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-fade-up" style="animation-delay: 0.1s;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-coral to-pink-500 rounded-2xl flex items-center justify-center mb-6 animate-float" style="animation-delay: 0.1s;">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Safety First</h3>
+                    <p class="text-gray-600 leading-relaxed">Real-time safety alerts and emergency contact information.</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-soft-yellow/20 to-orange-100 rounded-2xl p-8 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-fade-up" style="animation-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-soft-yellow to-orange-500 rounded-2xl flex items-center justify-center mb-6 animate-float" style="animation-delay: 0.2s;">
+                        <i class="fas fa-heart text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Beach Weddings</h3>
+                    <p class="text-gray-600 leading-relaxed">Plan your perfect beach wedding with our vendor network.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-16">
+                <a href="features.html" class="inline-block bg-gradient-to-r from-ocean-blue to-turquoise text-white px-8 py-4 rounded-full text-lg font-semibold shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-ocean-blue/50">
+                    View All Features
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-gray-800 via-gray-900 to-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-ocean-blue to-turquoise rounded-full flex items-center justify-center mr-4 animate-float">
+                            <i class="fas fa-umbrella-beach text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold bg-gradient-to-r from-ocean-blue to-turquoise bg-clip-text text-transparent">Ecoshore</span>
+                    </div>
+                    <p class="text-gray-300 mb-8 max-w-md text-lg leading-relaxed">
+                        Your smart coastal companion for discovering beaches, staying safe, and planning perfect getaways.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-300 hover:text-ocean-blue transition-all duration-300 hover:scale-125">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-turquoise transition-all duration-300 hover:scale-125">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-coral transition-all duration-300 hover:scale-125">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-turquoise">Quick Links</h3>
+                    <div class="space-y-3">
+                        <a href="index.html" class="block text-gray-300 hover:text-ocean-blue transition-all duration-300 hover:translate-x-2">Home</a>
+                        <a href="features.html" class="block text-gray-300 hover:text-ocean-blue transition-all duration-300 hover:translate-x-2">Features</a>
+                        <a href="wedding.html" class="block text-gray-300 hover:text-ocean-blue transition-all duration-300 hover:translate-x-2">Beach Weddings</a>
+                        <a href="contact.html" class="block text-gray-300 hover:text-ocean-blue transition-all duration-300 hover:translate-x-2">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-ocean-blue">Contact</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-ocean-blue mr-4 text-lg"></i>
+                            <span class="text-gray-300">hello@ecoshore.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-turquoise mr-4 text-lg"></i>
+                            <span class="text-gray-300">+1 (555) 123-4567</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-300 text-lg">
+                    © 2024 Ecoshore. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

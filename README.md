@@ -2,13 +2,13 @@
 
 Ecoshore is a beach information platform with:
 - a Django + PostgreSQL backend API
-- a React frontend
+- a Vite + React frontend
 - live weather lookup (Open-Meteo)
 - nearby beach search
 
 ## Tech Stack
 - Backend: Django, Django REST Framework, PostgreSQL
-- Frontend: React (`react-scripts`)
+- Frontend: React + Vite + Tailwind CSS
 - APIs: Open-Meteo, Google Maps links
 
 ## Project Structure
@@ -93,11 +93,12 @@ npm start
 ```
 
 Frontend runs at `http://localhost:3000/`.
+This frontend now uses the `ecoshore-50` design and proxies `/api` calls to `http://127.0.0.1:8000`.
 
 ## Common Issues
 - `password authentication failed for user "jal"`:
   - PostgreSQL credentials do not match `backend/.env`.
-- `react-scripts: not found`:
+- `vite: not found`:
   - run `npm install` inside `frontend/`.
 - `No module named 'django'`:
   - activate backend virtualenv before running `manage.py`.
